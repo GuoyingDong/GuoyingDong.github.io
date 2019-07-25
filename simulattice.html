@@ -29,9 +29,26 @@ function includeHTML() {
   }
 }
 </script>
+
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: green;
+}
+</style>
 </head>
 <body>
 
@@ -42,8 +59,71 @@ includeHTML();
 
 
 <div style="min-width: 500px; max-width: 1500px; margin:0 auto">
+    <br>
     <h1>SimuLattice</h1>
+    <h2 style="font-size: 28px">A simulation software to support the design of lattice structures fabricated by Additive Manufacturing</h2>
+    <br />
+    <form action="static/simulattice.zip">
+        <button class="button">Download</button>
+    </form>
 </div>
+
+<div style="min-width: 500px; max-width: 1500px; margin:0 auto">
+    <br>
+    <img style="float: right" src="static/img/interface.png" width="1100" height="750">
+    <p style="font-size: 24px">It has four models:</p>
+    <ul style="list-style-type:disc; font-size:18px">
+        <li>3D numerical homogenization model</li>
+        <li>Joint stiffening element model</li>
+        <li>Hybrid element model</li>
+        <li>As-built material property model</li>
+    </ul>
+    <br>
+
+    <p style="font-size: 24px">Introduction</p>
+
+    <p style="font-family: Arial ; font-size: 16px;">
+        The design of lattice structure can be divided into three design stages:<br>
+        <br>
+        1. Initial design stage<br>
+        2. Design optimization stage<br>
+        3. Design validation stage<br>
+        <br>
+    </p>
+    <p style="font-family: Arial ; font-size: 16px; text-align:justify; text-justify:inter-ideograph;">
+        The homogenization model can be used in the initial design stage to help designers to get the effective
+        mechanical property of any lattice topology. Designers don't need a solid mathematical background. The
+        effective property can by simply obtained by the homogenization code in SimuLattice.<br>
+        <br>
+        The joint stiffening element model can be used in the
+        design optimization stage. It can consider the influence of the joint on the stiffness of the lattice structure.
+        Therefore, the result from the joint stiffening element model is more accurate.<br>
+        <br>
+        The hybrid element model can be used to simulate the solid-lattice hybrid structure. It uses the beam element to
+        model the lattice structure; it uses the tetrahedral element to model the solid part. The total computational cost
+        of the hybrid element model is much lower than the traditional model.<br>
+        <br>
+        The as-built material property model is to consider the manufacturing influence of AM on the mechanical property
+        of lattice structures. The material data is obtained experimentally. Interpolation functions are used to construct
+        the as-built material property model. Currently the material data stored in SimuLattice is for PLA fabricated by Ultimaker 3.
+        More materials will be added in the future.
+    </p>
+
+    <div style="height: 30px"></div>
+
+</div>
+
+<div style="min-width: 500px; max-width: 1500px; margin:0 auto; text-align: center">
+    <iframe width="960" height="540"
+            src="https://www.youtube.com/embed/bI7yyK2WCas"
+            frameborder="0" allowfullscreen>
+    </iframe>
+    <div style="height: 30px"></div>
+</div>
+
+
+
+
 
 <div w3-include-html="end.html"></div>
 <script>

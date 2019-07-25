@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Guoying Dong</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+
+<nav class="navbar navbar-inverse">
+    <div style="min-width: 500px; max-width: 1500px; margin:0 auto">
+
+        <!-- Header -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{% url 'mainpage:index' %}">Guoying Dong</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="topNavBar">
+
+            <ul class="nav navbar-nav">
+                <li class="{% block homo3d_active %}{% endblock %}">
+                    <a href="simulattice.html">
+                        <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>&nbsp; SimuLattice
+                    </a>
+                </li>
+                <li class="{% block database_active %}{% endblock %}">
+                    <a href="{% url 'mainpage:index' %}">
+                        <span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>&nbsp; Database
+                    </a>
+                </li>
+                <li class="{% block download_active %}{% endblock %}">
+                    <a href="{% url 'mainpage:download' %}">
+                        <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>&nbsp; Download
+                    </a>
+                </li>
+                <li class="{% block publication_active %}{% endblock %}">
+                    <a href="{% url 'mainpage:publication' %}">
+                        <span class="glyphicon glyphicon-file" aria-hidden="true"></span>&nbsp; Publications
+                    </a>
+                </li>
+            </ul>
+
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="{% block aboutme_active %}{% endblock %}">
+                    <a href="{% url 'mainpage:aboutme' %}">
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp; About me
+                    </a>
+                </li>
+            </ul>
+
+
+
+        </div>
+
+
+
+    </div>
+</nav>
+
+</body>
+</html>

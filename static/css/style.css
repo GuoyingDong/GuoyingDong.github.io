@@ -14,9 +14,17 @@ div.ex-title
     margin-right:10%;
 }
 
+div.name-font{
+    font-family: 'Segoe Print';
+    font-size: 60px;
+    text-align: right;
+    padding-top: 50px;
+    padding-right: 0px;
+}
+
 div.ex-end{
     min-width:500px;
-    max-width:1500px;
+    max-width:1200px;
     margin:0 auto;
     overflow: auto;
 }
@@ -62,19 +70,17 @@ div.two-second{
     width: 30%;
 }
 
-h1{
-    font-family: 'Indie+Flower', cursive;
-    font-size: 40px;
-}
-
 h2{
-    font-size: 20px;
+    font-size: 24px;
 }
 
 p{
-    font-size: 18px;
+    font-size: 16px;
 }
 
+td{
+    font-size: 16px;
+}
 
 .center {
     display: block;

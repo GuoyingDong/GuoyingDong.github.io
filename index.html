@@ -30,20 +30,154 @@ function includeHTML() {
 }
 </script>
 
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Sans">
+  <style>
+  body {
+    font-family: "Noto Sans";
+    font-size: 16px;
+  }
+  </style>
+  <title>Guoying Dong</title>
+</head>
 
-<div w3-include-html="head.html"></div>
-<script>
-includeHTML();
-</script>
+<body>
+  <div w3-include-html="head.html"></div>
+  <script>
+  includeHTML();
+  </script>
 
-<div style="min-width: 500px; max-width: 1500px; margin:0 auto">
-    <img src = "static/img/guoying.jpg" width="110" height="150">
-</div>
+  <div style="min-width: 500px; max-width: 1000px; margin:0 auto; text-align: center">
+      <img style="float: left; margin-right: 50px; margin-left: 50px;" src = "static/img/guoying.jpg" width="110" height="150">
+      <div style="text-align: left; margin-top: 50px;">
+        <p> 
+          <b>Dr. Dong, Guoying</b> &nbsp &nbsp <a href = "mhttps://www.linkedin.com/in/guoying-dong-b10499120/">LinkedIn</a><br />
+          Research Fellow<br /><br /> 
+          Digital Manufacturing and Design Center --- <a href = "https://dmand.sutd.edu.sg/"><b>DManD</b></a><br />
+          Singapore University of Technology and Design --- <a href = "https://sutd.edu.sg/"><b>SUTD</b></a><br><br>
+          E-mail: <a href = "mailto: guoying.dong@mail.mcgill.ca">guoying.dong@mail.mcgill.ca</a>
+          <br>
+          <br>
+      </p>
+    </div>
+  </div>
 
-<div w3-include-html="end.html"></div>
-<script>
-includeHTML();
-</script>
+  <div style="min-width: 500px; max-width: 1000px; margin:20px auto; margin-bottom: 100px; text-align: left">
+    <header>
+      <h1>
+        Education
+      </h1>
+      <div style="float: left; width: 400px; margin: 20px;">
+        <img src="static/img/mcgill.png" height="50px">
+        
+        <p>
+          <b>McGill University</b> <br>
+          Doctor of Philosophy<br>
+          2015.09 - 2019.10<br>
+          Department of Mechanical Engineering<br>
+          Montreal, CANADA
+        </p>
+      </div>
+
+      <div style="float:left; width: 300px; margin: 20px;">
+        <img src="static/img/nwpu.png" height="50px">
+        <p>
+          <b>Northwestern Polytechnical University</b> <br>
+          Bachelor of Engineering<br>
+          2011.09 - 2015.07<br>
+          School of Aeronautics<br>
+          Xi'an, China
+        </p>
+      </div>
+    </div>
+
+    <div style="clear: left; min-width: 500px; max-width: 1000px; margin:20px auto; margin-bottom: 50px; text-align: left">
+      <h1>Teaching Experience</h1>
+      <h3>Singapore University of Technology and Design, Instructor</h3>
+      <table style="width:700px; margin-left: 20px;">
+        <tr>
+          <td>Class 30. 207 &nbsp&nbsp</td>
+          <td>Structural Mechanics and Design</td>
+          <td>2020.05 - 2020.08</td> 
+        </tr>
+      </table>
+      <h3>McGill University, Teaching Assistant</h3>
+      <table style="width:700px; margin-left: 20px">
+        <tr>
+          <td>MECH 360 &nbsp&nbsp&nbsp&nbsp</td>
+          <td>Principle of Manufacturing</td>
+          <td>2017.09 - 2019.04</td> 
+        </tr>
+        <tr>
+          <td>MECH 321 &nbsp&nbsp&nbsp&nbsp</td>
+          <td>Mechanics of Deformable Solids</td>
+          <td>2017.12 - 2019.04</td> 
+        </tr>
+        <tr>
+          <td>MECH 290 &nbsp&nbsp&nbsp&nbsp</td>
+          <td>Computer Graphics</td>
+          <td>2019.03 - 2019.04</td> 
+        </tr>
+        <tr>
+          <td>MECH 560 &nbsp&nbsp&nbsp&nbsp</td>
+          <td>Eco-design and Product LCA</td>
+          <td>2019.03 - 2019.04</td> 
+        </tr>
+        <tr>
+          <td>MECH 498/499</td>
+          <td>Interdisciplinary Design Project</td>
+          <td>2018.09 - 2019.04</td> 
+        </tr>
+      </table>
+    </div>
+
+    <div style="min-width: 500px; max-width: 1000px; margin:20px auto; margin-bottom: 100px; text-align: left">
+        <h1>Research Interest</h1>
+        <h2>1. Functionally Graded Materials</h2>
+        <img style="float: right; margin-left: 30px; margin-bottom: 10px;" src="static/img/past_research.png" height="350">
+        <p style="text-align: justify;">
+        Functionally graded materials have been widely used in many applications with the 
+        development of Additive Manufacturing. How to design the functionally graded materials
+        is still a challenging issue. Simulation-based design is a popular way.
+        The main contribution is that I provided design and simulation 
+        tool for researchers to design functionally graded materials manufactured 
+        by AM. 
+        <br><br>
+        The application includes aerospace lightweight structure design, 
+        cellular medical implant design, and conformal cooling channel design. 
+        My homogenization code has been downloaded more than 190 times on MATLAB 
+        community website. It has been widely used to estimate the mechanical property 
+        of cellular materials. The hybrid element model I proposed is also adopted by 
+        some companies to predict the mechanical performance of solid lattice hybrid 
+        structures.
+        </p>
+        <h2>2. Customized Insole Design</h2>
+      
+        <div style="float: left; margin-right: 50px;"><iframe width="528" height="325" src="https://www.youtube.com/embed/Gumd3XDyCJU"></iframe></div>
+        <P style="text-align: justify;">
+          My current research in SUTD is in collaboration with RESA Wearables Inc. in the USA. 
+          
+          <br><br>This project is to design an AM fabricated customized insole with functionally graded infill patterns. The mechanical property of the insole is adjustable by controlling the infill pattern in the process planning stage. A simulation model will be proposed to predict the mechanical property of the internal structure. The process parameters will be optimized to improve the fabrication speed for mass production. 
+          
+          <br><br>I am also working on the CAD for AM project in SUTD. The objective is to incorporate the manufacturing data into the design and simulation process to optimize the product performance.
+          </P>
+
+        <!-- ADD SCALEX <h2>
+          3. ScaleX -- A digital Design Platform
+        </h2>
+        -->
+      
+
+    </header>
+
+  </div>
+
+
+
+  <div w3-include-html="end.html"></div>
+  <script>
+  includeHTML();
+  </script>
 
 
 </body>

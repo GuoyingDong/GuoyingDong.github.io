@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+    function includeHTML() {
+        var z, i, elmnt, file, xhttp;
+        /*loop through a collection of all HTML elements:*/
+        z = document.getElementsByTagName("*");
+        for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain atrribute:*/
+            file = elmnt.getAttribute("w3-include-html");
+            if (file) {
+                /*make an HTTP request using the attribute value as the file name:*/
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                        if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                        /*remove the attribute, and call this function once more:*/
+                        elmnt.removeAttribute("w3-include-html");
+                        includeHTML();
+                    }
+                }
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                /*exit the function:*/
+                return;
+            }
+        }
+    }
+</script>
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Sans">
+    <style>
+        body {
+            font-family: "Noto Sans";
+            font-size: 16px;
+        }
+    </style>
+    <title>Guoying Dong</title>
+</head>
+
+<body>
+<div style="background-image: url('static/img/index_start_cu.png'); background-repeat: no-repeat; background-size: cover; 
+    height: 700px; color: white;">
+    <div w3-include-html="head.html"></div>
+    <div style="height:100px"></div>
+    
+
+
+    <div style="float: right; background: rgba(0, 0, 0, .7); max-height: 200px; min-height: 100px; width: 50%;">
+        <div style="min-width: 500px; max-width: 1000px; margin:auto; opacity: 1;">
+            <div class="name-font">
+                <b>
+                    Design for a better world!
+                </b>
+                <p style="font-size: 40px;">
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    includeHTML();
+</script>
+
+
+
+
+<div style="min-width: 500px; max-width: 1200px; margin:0 auto; text-align: justify;">
+
+    <div style="height: 30px">
+    </div>
+
+    <div style = "padding: 30px; text-align: justify;">
+        <b style="font-size: 30px; color: black; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Intelligent Design and Manufacturing Lab</b>
+        <p style="color: black; margin-top: 15px;">The IDM lab is located in a dedicated ~2,700 sq. ft. research space on the CU Denver Downtown Campus. The lab has the capabilities of 3D printing various polymers and composites. So far, the lab is equipped with multiple commercial and homemade 3D printers with different printing techniques, such as direct ink writing (DIW), material extrusion (ME), and stereolithography (SLA). These printers allow us to 3D print thermosets, thermoplastics, and their composites across different length scales. The commercial continuous fiber printer Anisoprint can be controlled by G-code to place the fiber, which enables high degrees of freedom for research. The lab has three levels of microscopy ranging from optical light microscopy (2-5×) to polarized light microscopy (20- 50×), and atomic force microscopy (~10-100 nm resolution). It contains a muffle furnace, UV polymerization ovens/lights, drill press, band saw, and complete tool chest with diamond-tipped coring bits. </p>
+        <p style="color: black; margin-top: 5px;">Furthermore, this space houses universal, dynamic, and thermal testing capabilities across three machines: a uniaxial mechanical tester, a cyclic mechanical tester, and a dynamic mechanical analyzer. These test machines are all equipped with thermal chambers and varying precision load cells. Overall, these machines allow us to test from 0.1 mN to 30 kN with a temperature range from -200 to 400 ºC. It can support the mechanical experiment of this project in different length scale.</p>
+    </div>
+    
+    <img src="static/img/lab.PNG" alt="Nature" class="responsive">
+    
+
+
+</div>
+
+<div style="height: 100px;"></div>
+<div w3-include-html="end.html"></div>
+<script>
+    includeHTML();
+</script>
+
+</body>
+</html>

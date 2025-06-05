@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+    function includeHTML() {
+        var z, i, elmnt, file, xhttp;
+        /*loop through a collection of all HTML elements:*/
+        z = document.getElementsByTagName("*");
+        for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain atrribute:*/
+            file = elmnt.getAttribute("w3-include-html");
+            if (file) {
+                /*make an HTTP request using the attribute value as the file name:*/
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                        if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                        /*remove the attribute, and call this function once more:*/
+                        elmnt.removeAttribute("w3-include-html");
+                        includeHTML();
+                    }
+                }
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                /*exit the function:*/
+                return;
+            }
+        }
+    }
+</script>
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Sans">
+    <style>
+        body {
+            font-family: "Noto Sans";
+            font-size: 16px;
+        }
+    </style>
+    <title>Guoying Dong</title>
+</head>
+
+<body>
+<div style="background-image: url('static/img/index_start_cu.png'); background-repeat: no-repeat; background-size: cover; 
+    height: 700px; color: white;">
+    <div w3-include-html="head.html"></div>
+    <div style="height:100px"></div>
+    
+
+
+    <div style="float: right; background: rgba(0, 0, 0, .7); max-height: 200px; min-height: 100px; width: 50%;">
+        <div style="min-width: 500px; max-width: 1000px; margin:auto; opacity: 1;">
+            <div class="name-font">
+                <b>
+                    Design for a better world!
+                </b>
+                <p style="font-size: 40px;">
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    includeHTML();
+</script>
+
+<div style="height: 100px; width: 1300px; color: white;"></div>
+
+<div class="div-news" style="height: 400px; width: 1300px; color: white;">
+    
+    <!-- Title that clears floats -->
+    <div style="font-size: 30px; color: black; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; clear: both; padding-bottom: 10px;">
+        <b>High School Interns (2023 - Now)</b>
+    </div>
+
+    <!-- Left text block -->
+    <div style="float: left; height: 400px; width: 600px; background: rgb(255, 255, 255); padding: 30px; text-align: justify;">
+        <p style="color: black; margin-top: 15px;">Students from DSST: Montview High School did their 6 weeks internship at CU Denver. 
+            Dr. Dong teach them the fundamentals of Additive Manufacturing. They get the chance to learn the implicit modeling software nTop,
+            and they have the opportunity working in the AM lab to 3D printing their design
+        </p>
+        <p style="color: black; margin-top: 15px;">Participants: Riya Mahesh, Juan Hinkson, Tiernan Pian, Kevin Rodriguez, Leonardo Orenday, Yafet Michael</p>
+        <p style="color: black; margin-top: 15px;">DSST Instructor: Ms. Jamie Villa and MS. Lisa Atufunwa</p>
+    </div>
+
+
+    <div style="float: right; width: 600px;">
+        <img src="static/img/news/intern.JPG" style="width: 100%; height: auto;" />
+    </div>
+
+</div>
+
+<div class="div-news" style="height: 350px; width: 1300px; color: white;">
+    
+    <!-- Title that clears floats -->
+    <div style="font-size: 30px; color: black; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; clear: both; padding-bottom: 10px;">
+        <b>Additive Manufacturing Workshop (July 25th, 2024)</b>
+    </div>
+
+    <!-- Left text block -->
+    <div style="float: left; height: 350px; width: 600px; background: rgb(255, 255, 255); padding: 30px; text-align: justify;">
+        <p style="color: black; margin-top: 15px;">This Additive Manufacturing Workshop was held by the Dean of College of Engineering, Design and Computing, Dr. Marty Dunn, 
+            and Assistant Professor in the Department of Mechanical Engineering, Dr. Guoying Dong as part of the OEDIT sponsored project: Auraria Campus Advanced Manufacturing Center of Excellence. 
+            More than 15 industy people were participated in this training.
+        </p>
+        <p style="color: black; margin-top: 15px;">Presenters include: Nicholas Jacobson, Kristin Wood, Richard Weir, Guoying Dong, Noah Mostow from Phase 3D, and 
+            Alex Janzen from Seurat Technologies
+        </p>
+    </div>
+
+
+    <div style="float: right; width: 600px;">
+        <img src="static/img/news/workshop.jpg" style="width: 100%; height: auto;" />
+    </div>
+
+</div>
+
+<div class="div-news" style="height: 350px; width: 1300px; color: white;">
+    
+    <!-- Title that clears floats -->
+    <div style="font-size: 30px; color: black; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; clear: both; padding-bottom: 10px;">
+        <b>Student Design Competition (May, 2024)</b>
+    </div>
+
+    <!-- Left text block -->
+    <div style="float: left; height: 350px; width: 600px; background: rgb(255, 255, 255); padding: 30px; text-align: justify;">
+        <p style="color: black; margin-top: 15px;">Students had a successful semester in MECH 3045 Additive Manufacturing at CU 
+            Denver. They were very very excited about learning nTop design and metal 3D printing. All the teams excelled in the 
+            Topology Optimization Competition. Students can hands-on the mechanical tester by groups and test their structure 
+            in-person. To get all the students involved during the testing, there is a live show of the experiment during the 
+            competition. 
+        </p>
+        <p style="color: black; margin-top: 15px;">Field-driven design, lattice structure, and FEA analysis skills enable our 
+            students designing mechanical parts with excellent mechanical properties. Furthermore, they all loved the Metal 
+            Additive Manufacturing Workshop and got a chance to process the metal 3d printing. 
+        </p>
+    </div>
+
+
+    <div style="float: right; width: 600px;">
+        <img src="static/img/news/design_competition.png" style="width: 100%; height: auto;" />
+    </div>
+
+</div>
+
+<div style="height: 300px;"></div>
+<div w3-include-html="end.html"></div>
+<script>
+    includeHTML();
+</script>
+
+</body>
+</html>

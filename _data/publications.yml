@@ -1,0 +1,167 @@
+# Publications, newest first within each type.
+# type: journal | conference | book | chapter. Wrap your name in <strong> to highlight it.
+
+- type: journal
+  year: 2026
+  url: "https://doi.org/10.1080/15376494.2026.2702552"
+  citation: "Sandford, Halston, Brian Lim, Nikola Hilderbrand, Kestin Kuhn, and <strong>Guoying Dong</strong>. \"<em>Dual-Wall Continuous Fiber Reinforced Cellular Structures Made by Fused Filament Fabrication</em>.\" <em>Mechanics of Advanced Materials and Structures</em>, vol. 33, no. 1, 2026, p. 2702552. Taylor & Francis."
+- type: journal
+  year: 2026
+  url: "https://doi.org/10.1080/09276440.2025.2564502"
+  citation: "Sandford, Halston J. C., and <strong>Guoying Dong</strong>. \"<em>Enhancing Interfacial Bonding in Fused Filament Fabricated Continuous Fiber-Reinforced Polymers via Process Control</em>.\" <em>Composite Interfaces</em>, vol. 33, no. 5, 2026, pp. 1085–1101. Taylor & Francis."
+- type: book
+  year: 2026
+  url: "https://doi.org/10.1002/9781394168439"
+  citation: "Zhao, Yaoyao Fiona, Yunlong Tang, Sheng Yang, and <strong>Guoying Dong</strong>. <em>Design for Additive Manufacturing: Fundamental Principles and Advanced Strategies</em>. John Wiley & Sons, 2026."
+- type: journal
+  year: 2025
+  url: "https://advanced.onlinelibrary.wiley.com/doi/full/10.1002/admt.202401815"
+  citation: "Gracego, Alston X., Yuchen Ding, <strong>Guoying Dong</strong>, Martin L. Dunn, and Kai Yu. \"<em>Mechanical Properties and Printable Curvature of Continuous Fiber Composites Fabricated by Embedded 3D Printing</em>.\" <em>Advanced Materials Technologies</em>, 2025, p. 2401815. Wiley."
+- type: journal
+  year: 2025
+  url: "https://4spepublications.onlinelibrary.wiley.com/doi/full/10.1002/pc.29940"
+  citation: "Wang, Yuanrui, Yuchen Ding, Kai Yu, and <strong>Guoying Dong*</strong>. \"<em>Innovative Integration of Digital Light Processing and Direct Ink Writing for Continuous Fiber Reinforced Photopolymer</em>.\" <em>Polymer Composites</em>, John Wiley & Sons, Inc., 2025."
+- type: journal
+  year: 2025
+  url: "https://www.mdpi.com/2504-477X/9/5/218"
+  citation: "Wang, Yuanrui, Yuchen Ding, Kai Yu, and <strong>Guoying Dong*</strong>. \"<em>Advancing High-Performance Composites in Additive Manufacturing (AM) Through Pre-Impregnation and Direct Ink Writing for Scalable 3D Printing</em>.\" <em>Journal of Composites Science</em>, vol. 9, no. 5, 29 Apr. 2025, p. 218. MDPI."
+- type: journal
+  year: 2025
+  url: "https://link.springer.com/article/10.1007/s44150-025-00129-3"
+  citation: "Wang, Shengzhe, <strong>Guoying Dong</strong>, Trevor Walker, and Halston Sandford. \"<em>Mechanical Analyses of Félix Candela’s N-Edged Hyperbolic Paraboloid Umbrellas as Tubular Structures Under Uniaxial Compression</em>.\" <em>Architecture, Structures and Construction</em>, vol. 5, no. 1, June 2025, p. 9. Springer International Publishing."
+- type: journal
+  year: 2024
+  url: "https://link.springer.com/article/10.1007/s00170-023-12896-8"
+  citation: "Halston J. C. Sandford, Yunlong Tang, <strong>Guoying Dong*</strong>. \"<em>Investigation of Fiber Waviness in Fused Deposition Modeling Printed Continuous Fiber-Reinforced Polymers</em>.\" <em>The International Journal of Advanced Manufacturing Technology</em>, vol. 130, no. 7, 2024, pp. 3771–3780. Springer London."
+- type: journal
+  year: 2024
+  url: "https://4spepublications.onlinelibrary.wiley.com/action/showCitFormats?doi=10.1002%2Fpc.28854"
+  citation: "Wang, Yuanrui, Yuchen Ding, Ke Yu, and <strong>Guoying Dong*</strong>. \"<em>Innovative Polymer-Based Composite Materials in Additive Manufacturing: A Review of Methods, Materials, and Applications</em>.\" <em>Polymer Composites</em>, vol. 45, no. 17, 2024, pp. 15389–15420. Wiley."
+- type: journal
+  year: 2024
+  url: "https://pubs.rsc.org/en/content/articlelanding/2024/mh/d4mh00705k/unauth"
+  citation: "Ding, Yuchen, Alston X. Gracego, Yuanrui Wang, <strong>Guoying Dong</strong>, Martin L. Dunn, and Kai Yu. \"<em>Embedded 3D Printing of UV-Curable Thermosetting Composites with Continuous Fiber</em>.\" <em>Materials Horizons</em>, vol. 11, no. 18, 2024, pp. 4378–4392. Royal Society of Chemistry."
+- type: journal
+  year: 2024
+  url: "https://link.springer.com/article/10.1007/s00170-024-13974-1"
+  citation: "Brian Lim, Raphael Provosty, <strong>Guoying Dong*</strong>. \"<em>Investigation of the Cooling Performance of Chemically Etched Millimeter-Scale Channels Made by Selective Laser Melting</em>.\" <em>The International Journal of Advanced Manufacturing Technology</em>, vol. 133, no. 5, 2024, pp. 2333–2343. Springer London."
+- type: journal
+  year: 2023
+  url: "https://www.sciencedirect.com/science/article/pii/S0020740323006367"
+  citation: "Ladpha Teawdeswan, <strong>Guoying Dong*</strong>. \"Inverse design of multi-material gyroid structures made by additive manufacturing\", International Journal of Mechanical Sciences."
+- type: journal
+  year: 2023
+  url: "https://www.tandfonline.com/doi/full/10.1080/0951192X.2023.2257628"
+  citation: "L. Lestandi, J.C. Wong, <strong>Guoying Dong</strong>, et al. \"Data-driven surrogate modelling of residual stresses in Laser Powder-Bed Fusion\", International Journal of Computer Integrated Manufacturing."
+- type: journal
+  year: 2022
+  url: "https://www.sciencedirect.com/science/article/pii/S092401362200053X"
+  citation: "<strong>Guoying Dong*</strong>, Jian Cheng Wong, Lucas Lestandi, Jakub Mikula, Guglielmo Vastola, Mark Hyunpong Jhon, My Ha Dao, Umesh Kizhakkinan, Clive Stanley Ford, David William Rosen. \"A part-scale, feature-based surrogate model for residual stresses in the laser powder bed fusion process.\" Journal of Materials Processing Technology 304, 117541."
+- type: journal
+  year: 2021
+  url: "https://link.springer.com/article/10.1007/s10845-021-01841-9"
+  citation: "Gao, Zhenyang, <strong>Guoying Dong*</strong>, Yunlong Tang, and Yaoyao Fiona Zhao. \"Machine learning aided design of conformal cooling channels for injection molding.\" Journal of Intelligent Manufacturing (2021): 1-19."
+- type: journal
+  year: 2021
+  url: "https://doi.org/10.1016/j.addma.2021.101946"
+  citation: "Zhang, Ying, Sheng Yang, <strong>Guoying Dong</strong>, and Yaoyao Fiona Zhao. \"Predictive manufacturability assessment system for laser powder bed fusion based on a hybrid machine learning model.\" Additive Manufacturing 41 (2021): 101946."
+- type: journal
+  year: 2020
+  url: "https://doi.org/10.1016/j.addma.2020.101539"
+  citation: "Gao, Zhenyang, Dawei Li, <strong>Guoying Dong</strong>, and Yaoyao Fiona Zhao. \"Crack path-engineered 2D octet-truss lattice with bio-inspired crack deflection.\" Additive Manufacturing 36 (2020): 101539."
+- type: journal
+  year: 2020
+  url: "https://doi.org/10.1115/1.4046812"
+  citation: "Liu, Yuan, Shurong Zhuo, Yining Xiao, Guolei Zheng, <strong>Guoying Dong</strong>, and Yaoyao Fiona Zhao. \"Rapid modeling and design optimization of multi-topology lattice structure based on unit-cell library.\" Journal of Mechanical Design 142, no. 9 (2020): 091705."
+- type: journal
+  year: 2020
+  url: "https://link.springer.com/article/10.1007/s00170-020-05734-8"
+  citation: "Jiang, Jingchao, Xun Xu, Yi Xiong, Yunlong Tang, <strong>Guoying Dong</strong>, and Samyeon Kim. \"A novel strategy for multi-part production in additive manufacturing.\" The International Journal of Advanced Manufacturing Technology 109, no. 5 (2020): 1237-1248."
+- type: journal
+  year: 2020
+  url: "https://doi.org/10.1016/j.addma.2020.101116"
+  citation: "<strong>Guoying Dong</strong>, Yunlong Tang, Dawei Li, and Yaoyao Fiona Zhao. \"Design and optimization of solid lattice hybrid structures fabricated by additive manufacturing.\" Additive Manufacturing 33 (2020): 101116."
+- type: journal
+  year: 2019
+  url: "https://link.springer.com/article/10.1007/s00170-019-03996-5"
+  citation: "<strong>Guoying Dong</strong>, Julien Marleau-Finley, and Yaoyao Fiona Zhao. \"Investigation of electrochemical post-processing procedure for Ti-6Al-4V lattice structure manufactured by direct metal laser sintering (DMLS).\" The International Journal of Advanced Manufacturing Technology 104, no. 9 (2019): 3401-3417."
+- type: journal
+  year: 2019
+  url: "https://doi.org/10.1115/1.4042617"
+  citation: "Li, Dawei, Ning Dai, Yunlong Tang, <strong>Guoying Dong</strong>, and Yaoyao Fiona Zhao. \"Design and optimization of graded cellular structures with triply periodic level surface-based topological shapes.\" Journal of Mechanical Design 141, no. 7 (2019)."
+- type: journal
+  year: 2019
+  url: "https://link.springer.com/article/10.1007/s00170-019-03308-x"
+  citation: "Tang, Yunlong, <strong>Guoying Dong</strong>, and Yaoyao Fiona Zhao. \"A hybrid geometric modeling method for lattice structures fabricated by additive manufacturing.\" The International Journal of Advanced Manufacturing Technology 102, no. 9 (2019): 4011-4030."
+- type: journal
+  year: 2019
+  url: "https://www.nature.com/articles/s41598-018-36778-2"
+  citation: "Lin, Yi, Mayumi Umebayashi, Mohamed-Nur Abdallah, <strong>Guoying Dong</strong>, Michael G. Roskies, Yaoyao Fiona Zhao, Monzur Murshed, Zhiguang Zhang, and Simon D. Tran. \"Combination of polyetherketoneketone scaffold and human mesenchymal stem cells from temporomandibular joint synovial fluid enhances bone regeneration.\" Scientific Reports 9, no. 1 (2019): 1-13."
+- type: journal
+  year: 2019
+  url: "https://doi.org/10.1115/1.4040555"
+  citation: "<strong>Guoying Dong</strong>, Yunlong Tang, and Yaoyao Fiona Zhao. \"A 149 line homogenization code for three-dimensional cellular materials written in matlab.\" Journal of Engineering Materials and Technology 141, no. 1 (2019)."
+- type: journal
+  year: 2018
+  url: "https://doi.org/10.1016/j.ijmecsci.2018.09.014"
+  citation: "<strong>Guoying Dong</strong>, and Yaoyao Fiona Zhao. \"Numerical and experimental investigation of the joint stiffness in lattice structures fabricated by additive manufacturing.\" International Journal of Mechanical Sciences 148 (2018): 475-485."
+- type: journal
+  year: 2018
+  url: "https://doi.org/10.1016/j.cad.2018.06.003"
+  citation: "Li, Dawei, Wenhe Liao, Ning Dai, <strong>Guoying Dong</strong>, Yunlong Tang, and Yi Min Xie. \"Optimal design and modeling of gyroid-based functionally graded cellular structures for additive manufacturing.\" Computer-Aided Design 104 (2018): 87-99."
+- type: journal
+  year: 2018
+  url: "https://doi.org/10.1016/j.addma.2017.11.004"
+  citation: "<strong>Guoying Dong</strong>, Grace Wijaya, Yunlong Tang, and Yaoyao Fiona Zhao. \"Optimizing process parameters of fused deposition modeling by Taguchi method for the fabrication of lattice structures.\" Additive Manufacturing 19 (2018): 62-72."
+- type: journal
+  year: 2017
+  url: "https://doi.org/10.1115/1.4037305"
+  citation: "<strong>Guoying Dong</strong>, Yunlong Tang, and Yaoyao Fiona Zhao. \"A survey of modeling of lattice structures fabricated by additive manufacturing.\" Journal of Mechanical Design 139, no. 10 (2017): 100906."
+- type: journal
+  year: 2017
+  url: "https://ieeexplore.ieee.org/document/7913670"
+  citation: "Tang, Yunlong, <strong>Guoying Dong</strong>, Qinxue Zhou, and Yaoyao Fiona Zhao. \"Lattice structure design and optimization with additive manufacturing constraints.\" IEEE Transactions on Automation Science and Engineering 15, no. 4 (2017): 1546-1562."
+- type: conference
+  year: 2024
+  url: "https://asmedigitalcollection.asme.org/MSEC/proceedings/MSEC2024/88100/V001T01A015/1203172"
+  citation: "Teawdeswan, Ladpha, Jake Tinsley, Dana Carpenter, and <strong>Guoying Dong*</strong>. \"Numerical Simulation of Multi-Material Gyroid Structures Made by Fused Deposition Modeling.\" <em>International Manufacturing Science and Engineering Conference</em>, 17 June 2024."
+- type: conference
+  year: 2024
+  url: "https://asmedigitalcollection.asme.org/MSEC/proceedings/MSEC2024/88100/V001T04A001/1203166"
+  citation: "Price, Garrett, Zhuangru Wen, Yunlong Tang, and <strong>Guoying Dong*</strong>. \"Energy Prediction Model for the Sustainability of Continuous Fiber Reinforced Polymers Made by Fused Deposition Modeling.\" <em>International Manufacturing Science and Engineering Conference</em>, 17 June 2024."
+- type: conference
+  year: 2022
+  url: "https://repositories.lib.utexas.edu/handle/2152/117527"
+  citation: "<strong>Guoying Dong</strong>, Yuchen Ding, Ladpha Teawdeswan, Chaoqian Luo, Kai Yu. \"Experimental and Numerical Analysis of Lattice Structures with Different Heterogeneities.\" 2022 International Solid Freeform Fabrication Symposium."
+- type: conference
+  year: 2022
+  url: "https://ieeexplore.ieee.org/abstract/document/10022022"
+  citation: "Jian Cheng Wong, Chin Chun Ooi, Joyjit Chattoraj, Lucas Lestandi, <strong>Guoying Dong</strong>, Umesh Kizhakkinan, David William Rosen, Mark Hyunpong Jhon, My Ha Dao. \"Graph Neural Network Based Surrogate Model of Physics Simulations for Geometry Design.\" 2022 IEEE Symposium Series on Computational Intelligence (SSCI)."
+- type: conference
+  year: 2021
+  url: "https://www.sciencedirect.com/science/article/pii/S2351978921000408"
+  citation: "Tang, Yunlong, <strong>Guoying Dong</strong>, Yi Xiong, and Qiusen Wang. \"Data-driven design of customized porous lattice sole fabricated by additive manufacturing.\" Procedia Manufacturing 53 (2021): 318-326."
+- type: conference
+  year: 2019
+  url: "https://doi.org/10.1115/DETC2019-97610"
+  citation: "Zhang, Ying, <strong>Guoying Dong</strong>, Sheng Yang, and Yaoyao Fiona Zhao. \"Machine learning assisted prediction of the manufacturability of laser-based powder bed fusion process.\" In International Design Engineering Technical Conferences and Computers and Information in Engineering Conference, vol. 59179, p. V001T02A008. American Society of Mechanical Engineers, 2019."
+- type: conference
+  year: 2019
+  url: "https://doi.org/10.1017/dsi.2019.76"
+  citation: "<strong>Guoying Dong</strong>, Daniel Tessier, and Yaoyao Fiona Zhao. \"Design of shoe soles using lattice structures fabricated by additive manufacturing.\" In Proceedings of the Design Society: International Conference on Engineering Design, vol. 1, no. 1, pp. 719-728. Cambridge University Press, 2019."
+- type: conference
+  year: 2018
+  url: "https://www.sciencedirect.com/science/article/pii/S2351978918307613"
+  citation: "<strong>Guoying Dong</strong>, Yunlong Tang, Dawei Li, and Yaoyao Fiona Zhao. \"Mechanical properties of continuous kevlar fiber reinforced composites fabricated by fused deposition modeling process.\" Procedia Manufacturing 26 (2018): 774-781."
+- type: conference
+  year: 2017
+  url: "https://www.sciencedirect.com/science/article/pii/S2351978917302548"
+  citation: "<strong>Guoying Dong</strong>, Yunlong Tang, and Yaoyao Fiona Zhao. \"Simulation of elastic properties of solid-lattice hybrid structures fabricated by additive manufacturing.\" Procedia Manufacturing 10 (2017): 760-770."
+- type: conference
+  year: 2016
+  url: "https://doi.org/10.1115/DETC2016-59969"
+  citation: "Luo, Zhibo, Fan Yang, <strong>Guoying Dong</strong>, Yunlong Tang, and Yaoyao Fiona Zhao. \"Orientation optimization in layer-based additive manufacturing process.\" In International Design Engineering Technical Conferences and Computers and Information in Engineering Conference, vol. 50077, p. V01AT02A039. American Society of Mechanical Engineers, 2016."
+- type: chapter
+  year: 2021
+  url: "https://asmedigitalcollection.asme.org/ebooks/book/274/chapter-abstract/26137733/Mesoscale-Lattice-Structure-Design-and-Simulation?redirectedFrom=fulltext"
+  citation: "<strong>Guoying Dong</strong>, Yunlong Tang, Yaoyao Fiona Zhao, \"Mesoscale Lattice Structure Design and Simulation with the Support of a Property Database\", Advances in Computers and Information in Engineering Research, Volume 1, edited by John G. Michopoulos, Christiaan J.J. Paredis, David W. Rosen and Judy M. Vance, ASME Press, 2020."

@@ -1,0 +1,46 @@
+# Research areas. `summary` shows on the home page card; `body` on the Research page.
+# `body` paragraphs may contain HTML (links, <strong>).
+
+- id: continuous-fiber
+  title: Innovative 3D Printing of CFRPs with Continuous Fibers
+  image: hybrid-printing.webp
+  summary: New processes that embed continuous carbon fibers into photosensitive resins, including hybrid and embedded 3D printing.
+  body:
+    - Continuous fibers have been widely used in 3D printing processes to reinforce polymers. However, printing continuous fiber with photosensitive resin has been challenging. DIW is the most popular method to 3D print continuous fiber resin composites, despite its limitations in printing quality.
+    - Our research team at CU Denver developed innovative processes to embed continuous carbon fibers into photosensitive resins, including hybrid 3D printing and embedded 3D printing.
+    - <strong>Hybrid 3D Printing:</strong> Integration of DLP and DIW processes to print void-free, highly flexible, high-resolution continuous fiber reinforced photosensitive polymer. (<a href="https://doi.org/10.1002/pc.29940">Paper 1</a>, <a href="https://doi.org/10.3390/jcs9050218">Paper 2</a>)
+    - <strong>Embedded 3D Printing:</strong> Fiber is merged into liquid resin and cured by UV light. It enables varying volume fraction, multi-material matrices, and overhanging fibers. (<a href="https://doi.org/10.1039/D4MH00705K">Paper 1</a>, <a href="https://doi.org/10.1002/admt.202401815">Paper 2</a>)
+
+- id: properties-sustainability
+  title: "3D-Printed CFRPs: Properties and Sustainability"
+  image: fiber-waviness.webp
+  summary: How printing parameters drive fiber straightness, interfacial bonding and stiffness, plus the energy footprint of composite printing.
+  body:
+    - The mechanical properties of 3D printed CFRPs are not yet thoroughly understood. One challenge is the interfacial bonding between the fiber and matrix materials; another is the straightness of the fiber. Process parameters can significantly influence both, which eventually impacts the mechanical properties.
+    - Our recent research investigated the relationship between printing parameters, fiber straightness, and mechanical properties. We found that the fiber extrusion rate can be controlled to increase fiber tension during printing, which improves the straightness of the fiber and the stiffness of the composite. (<a href="https://doi.org/10.1007/s00170-023-12896-8">Paper</a>)
+    - In an era of heightened environmental awareness, the sustainability of manufacturing processes has become a critical focal point. As industries seek eco-friendly solutions, understanding the life cycle of these materials, their recyclability, and their potential to reduce waste becomes imperative. We started this research by measuring energy consumption during the printing process. (<a href="https://doi.org/10.1115/MSEC2024-124121">Paper</a>)
+
+- id: inverse-design
+  title: Inverse Design of Digital Materials
+  image: multimaterial-gyroid.webp
+  summary: Neural networks that generate multi-material lattice designs from a desired set of mechanical properties.
+  body:
+    - Material complexity and geometric complexity bring substantial design freedom, but the resulting design problems require a more intelligent approach. Artificial intelligence, especially generative AI, can generate design candidates directly from design requirements.
+    - Multi-material lattice structures made of PLA and TPU were designed to achieve a spectrum of mechanical properties. By changing the material ratio and the relative density, the mechanical properties can be controlled more smoothly. A neural network was developed to generate appropriate design parameters from desired mechanical properties. (<a href="https://doi.org/10.1016/j.ijmecsci.2023.108734">Paper</a>)
+
+- id: conformal-cooling
+  title: Conformal Cooling Channel Design
+  image: cooling.webp
+  summary: Additively manufactured cooling channels, and how chemical etching pushes micro-channels below 2 mm.
+  body:
+    - With additive manufacturing, conformal cooling channels can follow the part surface and can potentially be built faster than with conventional machining, especially for multi-cavity molds. I have worked on conformal cooling channel design for several case studies.
+    - However, the limitations of AM-made conformal cooling channels have not been well studied. Chemical etching can help extend the limits of micro cooling channels. Our team used DMLS to fabricate cooling channels with diameters from 1 mm to 4 mm. Without chemical etching, 2 mm channels work while 1 mm channels do not. After etching, 1 mm channels start to work, enabling micro cooling channel fabrication. For 3 mm and 4 mm channels, etching did not improve cooling performance. (<a href="https://doi.org/10.1007/s00170-024-13974-1">Paper</a>)
+
+- id: voxel-printing
+  title: Voxel Printing for Digitalized Materials
+  image: voxel-printing.webp
+  summary: Programming material composition voxel by voxel for smooth, data-driven property transitions.
+  body:
+    - Voxel printing is a promising AM technology that controls the material type voxel by voxel (a voxel is a pixel in 3D space). Voxels are micro-scale, so the macro-scale mechanical property is determined by the material selected in each voxel. Unlike conventional multi-material printing, voxel printing enables smooth transitions between materials.
+    - Digitalized materials are materials whose composition is controlled by digital data; in other words, the material is programmable. By coding the material distribution in each voxel, the overall property of the material can be easily controlled.
+    - The challenge is broadening the application of voxel printing. The relationship between material composition and properties needs to be established, and design tools that fully exploit voxel printing still need more development.

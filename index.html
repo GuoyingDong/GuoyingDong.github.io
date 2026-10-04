@@ -1,191 +1,95 @@
-<!DOCTYPE html>
-<html lang="en">
-<script>
-    function includeHTML() {
-        var z, i, elmnt, file, xhttp;
-        /*loop through a collection of all HTML elements:*/
-        z = document.getElementsByTagName("*");
-        for (i = 0; i < z.length; i++) {
-            elmnt = z[i];
-            /*search for elements with a certain atrribute:*/
-            file = elmnt.getAttribute("w3-include-html");
-            if (file) {
-                /*make an HTTP request using the attribute value as the file name:*/
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                        if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-                        /*remove the attribute, and call this function once more:*/
-                        elmnt.removeAttribute("w3-include-html");
-                        includeHTML();
-                    }
-                }
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                /*exit the function:*/
-                return;
-            }
-        }
-    }
-</script>
+---
+layout: default
+hero: false
+---
+{% assign a = site.author %}
+<section class="home-hero">
+  <img class="home-hero-bg" src="{{ '/assets/img/hero-campus.webp' | relative_url }}" alt="" fetchpriority="high">
+  <div class="container home-hero-inner">
+    <p class="eyebrow">{{ a.university }} · Mechanical Engineering</p>
+    <h1>Intelligent Design &amp; Manufacturing Lab</h1>
+    <p class="lede">Design for a better world. We develop new additive manufacturing processes, composite materials, and intelligent design tools, from continuous-fiber 3D printing to AI-driven inverse design.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="{{ '/research.html' | relative_url }}">Explore our research</a>
+      <a class="btn btn-ghost" href="{{ '/publication.html' | relative_url }}">Publications</a>
+    </div>
+  </div>
+</section>
 
-<head>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Sans">
-    <style>
-        body {
-            font-family: "Noto Sans";
-            font-size: 16px;
-        }
-    </style>
-    <title>Guoying Dong</title>
-</head>
-
-<body>
-<div style="background-image: url('static/img/index_start_cu.png'); background-repeat: no-repeat; background-size: cover; 
-    height: 700px; color: white;">
-    <div w3-include-html="head.html"></div>
-    <div style="height:100px"></div>
-    
-
-
-    <div style="float: right; background: rgba(0, 0, 0, .7); max-height: 800px; min-height: 100px; width: 50%;">
-        <div style="min-width: 500px; max-width: 1500px; margin:auto; opacity: 1;">
-            <div class="name-font">
-                <b>
-                    Intelligent Design & Manufacturing (IDM) Lab
-                </b>
-                <p style="font-size: 40px;">
-                    
-                </p>
-            </div>
+<section class="section">
+  <div class="container pi">
+    <img class="pi-photo" src="{{ '/assets/img/people/guoying-dong.webp' | relative_url }}" alt="Portrait of Dr. Guoying Dong" width="550" height="800">
+    <div class="pi-body">
+      <p class="eyebrow eyebrow-dark">Principal Investigator</p>
+      <h2>Dr. Guoying Dong</h2>
+      <p class="pi-role">{{ a.role }}, {{ a.department }}<br>{{ a.university }}</p>
+      <div class="pi-grid">
+        <div>
+          <h3>Education</h3>
+          <ul class="plain">
+            <li>Ph.D., McGill University, 2019</li>
+            <li>B.E., Northwestern Polytechnical University, 2015</li>
+          </ul>
         </div>
+        <div>
+          <h3>Contact</h3>
+          <ul class="plain">
+            <li><a href="mailto:{{ a.email }}">{{ a.email }}</a></li>
+            <li>Tel: {{ a.phone }}</li>
+            <li>Office: {{ a.office }}</li>
+          </ul>
+        </div>
+        <div class="pi-courses">
+          <h3>Courses</h3>
+          <ul class="plain">
+            <li>MECH 2023 / CVEN 2121 Statics</li>
+            <li>MECH 4208/5208 Computational Design</li>
+            <li>MECH 3045 Additive Manufacturing</li>
+            <li>MECH 1100 Fundamentals of Computational Innovation</li>
+          </ul>
+        </div>
+      </div>
+      <p class="pill-links">{% include profile-links.html %}</p>
     </div>
-</div>
-<script>
-    includeHTML();
-</script>
+  </div>
+</section>
 
-<div style="margin-left: auto; margin-right: auto; margin-top: 50px; height: 480px; width: 930px; color: rgb(0, 0, 0);">
-    <div style = "float: left; height : 520px; width: 360px; background-image: url('static/img/people/guoying_dong.png'); background-repeat: no-repeat; background-size: cover;">
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <h2>Research areas</h2>
+      <a class="more" href="{{ '/research.html' | relative_url }}">All research →</a>
     </div>
-
-    <div style = "float: right; height : 520px; width: 570px; background: rgb(224, 223, 217); padding: 30px; text-align: justify;">
-        <b style="margin-top: 10px; font-size: 30px;">Dr. Guoying Dong</b>
-        <p style="margin-top: 5px;">Assistant Professor</p>
-        <p style="margin-top: -10px;">Department of Mechanical Engineering</p>
-        <p style="margin-top: -10px;">University of Colorado Denver</p>
-
-        <b style="margin-top: 5px; font-size: 20px;">Education:</b>
-        <p style="margin-top: 5px;">Ph.D. McGill University, 2019</p>
-        <p style="margin-top: -10px;">B.E. Northwestern Polytechnical University, 2015</p>
-
-        <b style="margin-top: 5px; font-size: 20px;">Contact:</b>
-        <p style="margin-top: 5px;">Office: North Classroom 2024S</p>
-        <p style="margin-top: -10px;">Tel: 303-315-7560</p>
-        <p style="margin-top: -10px;">Email: guoying.dong@ucdenver.edu</p>
-
-        <b style="margin-top: 5px; font-size: 20px;">Courses:</b>
-        <p style="margin-top: 5px;">MECH2023/CVEN2121 Statics</p>
-        <p style="margin-top: -10px;">MECH4208/5208 Computational Design</p>
-        <p style="margin-top: -10px;">MECH3045 Additive Manufacturing</p>
-        <p style="margin-top: -10px;">MECH1100 Fundamentals of Computational Innovation</p>
-
+    <div class="card-grid">
+      {% for r in site.data.research %}
+      <a class="card" href="{{ '/research.html' | relative_url }}#{{ r.id }}">
+        <img src="{{ '/assets/img/research/' | append: r.image | relative_url }}" alt="" loading="lazy">
+        <div class="card-body">
+          <h3>{{ r.title }}</h3>
+          <p>{{ r.summary }}</p>
+        </div>
+      </a>
+      {% endfor %}
     </div>
+  </div>
+</section>
 
-</div>
-
-<div class = "div-research", style="height: 70px; width: 1300px; background-color: rgb(238, 233, 213); text-align: center;">
-    <b style="font-size: 50px;">Research Interest in the IDM Lab</b>
-</div>
-
-<div class = "div-research", style="height: 500px; width: 1300px; color: white;">
-    <div style = "float: left; height : 500px; width: 700px; background-image: url('static/img/research/hybrid_printing.JPG'); background-repeat: no-repeat; background-size: cover;">
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Latest news</h2>
+      <a class="more" href="{{ '/news.html' | relative_url }}">All news →</a>
     </div>
-
-    <div style = "float: right; height : 500px; width: 550px; background: rgb(233, 207, 151); padding: 30px; text-align: justify;">
-        <b style="font-size: 30px; color: black; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Innovative 3D printing of CFRPs with Continuous Fibers</b>
-        <p style="color: black; margin-top: 15px;">Continuous fibers have been widely used in 3D printing processes to reinforce the polymers. However, printing continuous fiber with photo-sensitive resin has been challenging. DIW process is the most popular method to 3D print continuous fiber resin composite, despite the limitations and printing quality.</p>
-        <p style="color: black; margin-top: 5px;">Our research team at CU Denver developed innovative processes to embed continuous carbon fibers into photo sensitive resins, including hybrid 3D printing and embedded 3D printing.</p>
-        <p style="color: black; margin-top: 5px;"><b>Hybrid 3D Printing:</b> Integration of DLP and DIW process to print void-free, high flexibility, and high-resolution continuous fiber reinforced photo-sensitive polymer. (<a href="https://doi.org/10.1002/pc.29940" target="_blank">Paper 1</a>, <a href="https://doi.org/10.3390/jcs9050218" target="_blank">Paper 2</a>)</p>
-        <p style="color: black; margin-top: 5px;"><b>Embedded 3D Printing:</b> Fiber is merged into liquid resin and cured by UV-light. It enables varying volume fraction, multi-material matrix, and overhanging fibers. (<a href="https://doi.org/10.1039/D4MH00705K" target="_blank">Paper 1</a>, <a href="https://doi.org/10.1002/admt.202401815" target="_blank">Paper 2</a>)</p>
+    <div class="news-mini">
+      {% for n in site.data.news limit: 3 %}
+      <a class="news-mini-item" href="{{ '/news.html' | relative_url }}#{{ n.title | slugify }}">
+        <img src="{{ '/assets/img/news/' | append: n.image | relative_url }}" alt="" loading="lazy">
+        <div>
+          <p class="date">{{ n.date }}</p>
+          <h3>{{ n.title }}</h3>
+        </div>
+      </a>
+      {% endfor %}
     </div>
-
-</div>
-
-<div class = "div-research", style="height: 500px; width: 1300px; color: white;">
-    <div style = "float: left; height : 460px; width: 700px; background: rgb(233, 207, 151); padding: 30px; text-align: justify;">
-        <b style="font-size: 30px; color: black; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">3D-printed CFRPs: Property, Sustainability</b>
-        <p style="color: black; margin-top: 15px;">In recent years, the mechanical properties of 3D printed CFRPs have not been understood thoroughly. One challenge is to understand the interfacial bonding between the fiber and matrix materials. The other challenge is about the fiber straightness of the fiber. It was found that the process parameters can significantly influence the interfacial bonding and fiber straightness, which eventually impact the mechanical properties.</p>
-        <p style="color: black; margin-top: 5px;">Our recent research investigated the relationship between the printing parameters, fiber straightness, 
-            and the mechanical properties. It was found that the fiber extrusion rate can be controlled to increase the tension of the fiber during printing, 
-            which can improve the straightness of the fiber and the stiffness of the composite. 
-            (<a href="https://doi.org/10.1007/s00170-023-12896-8" target="_blank">Paper</a>)
-        </p>
-        <p style="color: black; margin-top: 5px;">In an era of heightened environmental awareness, the sustainability of manufacturing processes has become 
-            a critical focal point. As industries seek eco-friendly solutions, understanding the life cycle analysis of these 
-            materials, their recyclability, and their potential to reduce waste becomes imperative. 
-            We started this research with measuring the energy consumption during the printing process. 
-            (<a href="https://doi.org/10.1115/MSEC2024-124121" target="_blank">Paper</a>)</p>
-    </div>
-
-    <div style = "float: right; height : 500px; width: 550px; background-image: url('static/img/research/fiber_waveness.jpg'); background-repeat: no-repeat; background-size: cover;">
-    </div>
-
-</div>
-
-<div class = "div-research", style="height: 370px; width: 1300px; color: white;">
-    <div style = "float: left; height : 350px; width: 615px; background-image: url('static/img/research/multimaterial_gyroid.jpg'); background-repeat: no-repeat; background-size: cover;">
-    </div>
-
-    <div style = "float: right; height : 370px; width: 600px; background: rgb(233, 207, 151); padding: 30px; text-align: justify;">
-        <b style="font-size: 30px; color: black; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Inverse design of digital materials</b>
-        <p style="color: black; margin-top: 15px;">Material complexity and geometry complexity can bring substantial design freedom. However, the complexity of the design problem requires a more intelligent design approach. Artificial Intelligence can be used to generate design candidates based on design requirements, which has great potential with generative-AI models.</p>
-        <p style="color: black; margin-top: 5px;">Multi-materials lattice structures made by PLA and TPU were designed to achieve a spectrum of mechanical properties. Our research found that by changing the material ratio and the relative density, the mechanical properties can be more smoothly controlled.  
-            A neural network was developed to generate appropriate design parameters by inputting desired mechanical properties.
-            (<a href="https://doi.org/10.1016/j.ijmecsci.2023.108734" target="_blank">Paper</a>)</p>
-    </div>
-
-</div>
-
-<div class = "div-research", style="height: 480px; width: 1300px; background-color: rgb(255, 255, 255);">
-
-    <div style = "float: right; height : 460px; width: 700px; background-image: url('static/img/research/cooling.png'); background-repeat: no-repeat; background-size: cover;">
-    </div>
-
-    <div style = "float: left; height : 480px; width: 560px; background: rgb(233, 207, 151); padding: 30px; ">
-        <b style="font-size: 30px; color: black; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Conformal Cooling Channel Design</b>
-        <p style="color: black; margin-top: 15px; text-align: justify;">Using additive manufacturing for conformal cooling, not only can the designs be complex and contour along the part surface, but it can also potentially be built quicker than conventional machining. This is even more true for multi-cavity molds utilizing additive manufacturing to build conformal cooling channels. I have worked on the conformal cooling channel design for several case studies.</p>
-        <p style="color: black; margin-top: 5px; text-align: justify;">However, the limitation of AM made conformal cooling channels has not been studied. 
-            Chemical etching can help to extend the limitation of micro cooling channels. Our research team used the DMLS process to fabricate cooling channels 
-            with diameters from 1 mm to 4 mm. It was found that without chemical etching, 2 mm channels works fine while 1 mm channels don’t work. 
-            After chemical etching, the 1 mm channels start to work, which can be used for micro cooling channel fabrication. 
-            Another interesting finding is that for 3 mm and 4 mm cooling channels, the etching didn’t improve the cooling performance. 
-            (<a href="https://doi.org/10.1007/s00170-024-13974-1" target="_blank">Paper</a>)
-        </p>
-    </div>
-
-</div>
-
-<div class = "div-research", style="height: 450px; width: 1300px; background-color: rgb(255, 255, 255);">
-
-    <div style = "float: left; height : 460px; width: 660px; background-image: url('static/img/voxel_printing.PNG'); background-repeat: no-repeat; background-size: cover;">
-    </div>
-
-    <div style = "float: right; height : 450px; width: 620px; background: rgb(233, 207, 151); padding: 30px; ">
-        <b style="font-size: 30px; color: black; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Voxel Printing for Digitalized Materials</b>
-        <p style="color: black; margin-top: 15px; text-align: justify;">Voxel printing is a promising AM technology that can control the material type voxel by voxel. (Voxel can be considered as a pixel in 3D space.) The voxel size is very small, in a micro-scale. The mechanical property in macro-scale is determined by the material selection in each voxel. Therefore, unlike multi-material printing, voxel printing can enable a smooth transition between materials.</p>
-        <p style="color: black; margin-top: 5px; text-align: justify;">Digitalized materials refer to the material composition can be controlled by digital data. In other words, the material is programmable. Voxel printing can be used to fabricate digitalized materials. By coding the material distribution in each voxel, the overall property of the material can be easily controlled.</p>
-        <p style="color: black; margin-top: 5px; text-align: justify;">The challenge is how to broad the application of voxel printing. The relationship between the material composition and the property needs to be established. Design tools that can fully exploit the potential of voxel printing still needs more development.</p>
-    </div>
-
-</div>
-
-<div w3-include-html="end.html"></div>
-<script>
-    includeHTML();
-</script>
-
-
-</body>
-</html>
+  </div>
+</section>

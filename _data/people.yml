@@ -1,0 +1,67 @@
+# Lab members, grouped by section. Each section renders in the order listed.
+# To add someone: copy an entry, drop a square photo (~500px) in assets/img/people/.
+# photo and bio are optional; without a photo, the person's initials are shown.
+
+- group: Ph.D. Students
+  members:
+    - name: Halston Sandford
+      photo: halston.webp
+      research: Mechanics and design of 3D printed continuous fiber reinforced polymers.
+      bio: Halston joined the IDM Lab in Jan. 2023 after earning his Bachelor's degree at Stanford. He studies process-property relationships, digital twins, and sustainability in composite 3D printing.
+      linkedin: https://www.linkedin.com/in/halston-sandford-835338a9/
+    - name: Patrick Tash
+      research: Generative AI for the inverse design of metamaterials.
+      bio: Patrick applies modern AI models, including generative models, to the inverse design of materials and structures, generating metamaterial designs directly from target properties.
+
+- group: Master's Students
+  members:
+    - name: Patrick Knowles
+      research: Simulation of 3D printed continuous fiber reinforced composites.
+      bio: Patrick simulates failure in 3D printed composites, including crack propagation, interfacial failure between fiber and matrix, and fiber breakage.
+      linkedin: https://www.linkedin.com/in/patrick-r-knowles/
+
+- group: Undergraduate Students
+  members:
+    - name: Idris Tinwala
+      photo: idris.webp
+      research: Design of voxel materials.
+      bio: Idris is a Mechanical Engineering undergraduate and EURēCA! Research Assistant working on voxel-printed multi-material structures.
+      linkedin: https://www.linkedin.com/in/idris-tin/
+    - name: Kestin Kuhn
+      photo: kestin.webp
+      research: Process planning of 3D printed composites.
+      bio: Kestin develops in-house slicers for the FFF process of continuous fiber deposition, allowing the location of fibers within a polymer composite to be customized.
+      linkedin: https://www.linkedin.com/in/kestin-kuhn/
+    - name: Chandler Slowik
+      research: Material extrusion of metallic materials.
+      bio: Chandler prints lattice structures in an FFF process using metallic powder mixed with polymer.
+
+- group: Alumni
+  alumni: true
+  # Order: Ph.D., then Master's, then Bachelor's; newest first within each.
+  members:
+    - name: Yuanrui Wang
+      photo: yuanrui.webp
+      research: Former Ph.D. Student
+      bio: In the IDM Lab from Aug. 2023 to Aug. 2025
+      linkedin: https://www.linkedin.com/in/yuanrui-wang-14ba66193/
+    - name: Ladpha Teawdeswan
+      photo: ladpha.webp
+      research: Master's Degree in Mechanical Engineering
+      bio: Graduated in May 2026
+      linkedin: https://www.linkedin.com/in/ladpha-teawdeswan-aa8209149/
+    - name: Raphael Provosty
+      photo: raphael.webp
+      research: Master's Degree in Mechanical Engineering
+      bio: Graduated in May 2023
+      linkedin: https://www.linkedin.com/in/raphael-provosty-8a8a51126/
+    - name: Nikola Hilderbrand
+      photo: nik.webp
+      research: Bachelor's Degree in Mechanical Engineering
+      bio: Graduated in May 2026
+      linkedin: https://www.linkedin.com/in/nikola-hilderbrand-71a5171b7/
+    - name: Brian Lim
+      photo: brian-lim.webp
+      research: Bachelor's Degree in Mechanical Engineering, Outstanding Undergraduate Student Award
+      bio: Graduated in May 2025
+      linkedin: https://www.linkedin.com/in/brian-lim-873b89338/

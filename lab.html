@@ -1,103 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<script>
-    function includeHTML() {
-        var z, i, elmnt, file, xhttp;
-        /*loop through a collection of all HTML elements:*/
-        z = document.getElementsByTagName("*");
-        for (i = 0; i < z.length; i++) {
-            elmnt = z[i];
-            /*search for elements with a certain atrribute:*/
-            file = elmnt.getAttribute("w3-include-html");
-            if (file) {
-                /*make an HTTP request using the attribute value as the file name:*/
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                        if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-                        /*remove the attribute, and call this function once more:*/
-                        elmnt.removeAttribute("w3-include-html");
-                        includeHTML();
-                    }
-                }
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                /*exit the function:*/
-                return;
-            }
-        }
-    }
-</script>
-
-<head>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Sans">
-    <style>
-        body {
-            font-family: "Noto Sans";
-            font-size: 16px;
-        }
-    </style>
-    <title>Guoying Dong</title>
-</head>
-
-<body>
-<div style="background-image: url('static/img/index_start_cu.png'); background-repeat: no-repeat; background-size: cover; 
-    height: 700px; color: white;">
-    <div w3-include-html="head.html"></div>
-    <div style="height:100px"></div>
-    
-
-
-    <div style="float: right; background: rgba(0, 0, 0, .7); max-height: 200px; min-height: 100px; width: 50%;">
-        <div style="min-width: 500px; max-width: 1000px; margin:auto; opacity: 1;">
-            <div class="name-font">
-                <b>
-                    Design for a better world!
-                </b>
-                <p style="font-size: 40px;">
-                    
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-<script>
-    includeHTML();
-</script>
-
-
-<div style="min-width: 500px; max-width: 1200px; margin:0 auto; text-align: justify;">
-
-    <div style="height: 30px">
-    </div>
-
-    <div style="padding: 30px; text-align: justify;">
-        <b style="font-size: 30px; color: black; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Intelligent Design and Manufacturing Lab</b>
-        <p style="color: black; margin-top: 15px;">
-            The Intelligent Design and Manufacturing (IDM) Lab is housed in a dedicated ~2,700 sq. ft. (NC2205, NC2405) research facility on the CU Denver Downtown Campus. It supports advanced research in additive manufacturing, materials characterization, and mechanical testing.
-        </p>
-
-        <p style="color: black; margin-top: 5px;">
-            <b>3D Printing Capabilities:</b>
-        </p>
-        <ul style="color: black; padding-left: 20px;">
+---
+layout: default
+title: Lab
+eyebrow: Facilities
+heading: Labs &amp; facilities
+lede: Two spaces on the CU Denver Downtown Campus support our research and hands-on teaching in additive manufacturing.
+---
+<section class="section">
+  <div class="container">
+    <div class="facility">
+      <div class="facility-head">
+        <h2>Intelligent Design and Manufacturing Lab</h2>
+        <p class="facility-meta">~2,700 sq. ft. · NC2205, NC2405</p>
+      </div>
+      <p class="facility-intro">The Intelligent Design and Manufacturing (IDM) Lab is housed in a dedicated research facility on the CU Denver Downtown Campus. It supports advanced research in additive manufacturing, materials characterization, and mechanical testing.</p>
+      <figure class="facility-img"><img src="{{ '/assets/img/lab/idm-lab.webp' | relative_url }}" alt="IDM Lab equipment: MTS universal tester, Bose fatigue tester, Anisoprint A4 printer, robotic arm and 3D printers" loading="lazy"></figure>
+      <div class="equip-grid">
+        <div class="equip">
+          <h3>3D printing</h3>
+          <ul>
             <li>Multiple commercial and custom-built 3D printers</li>
-            <li>Technologies supported:
-                <ul>
-                    <li>Direct Ink Writing (DIW)</li>
-                    <li>Material Extrusion (ME)</li>
-                    <li>Stereolithography (SLA)</li>
-                </ul>
-            </li>
-            <li>Supports printing of thermosets, thermoplastics, and fiber-reinforced composites</li>
+            <li>Direct Ink Writing (DIW), Material Extrusion (ME), Stereolithography (SLA)</li>
+            <li>Thermosets, thermoplastics, and fiber-reinforced composites</li>
             <li>Commercial Anisoprint continuous fiber printer with G-code control for programmable fiber paths</li>
-        </ul>
-
-        <p style="color: black; margin-top: 5px;">
-            <b>Characterization and Fabrication Tools:</b>
-        </p>
-        <ul style="color: black; padding-left: 20px;">
+          </ul>
+        </div>
+        <div class="equip">
+          <h3>Characterization &amp; fabrication</h3>
+          <ul>
             <li>Optical light microscope (2–5×)</li>
             <li>Polarized light microscope (20–50×)</li>
             <li>Atomic force microscope (~10–100 nm resolution)</li>
@@ -105,76 +34,59 @@
             <li>UV curing ovens and UV light systems</li>
             <li>Drill press and band saw for mechanical post-processing</li>
             <li>Fully equipped tool chest with diamond-tipped coring bits</li>
-        </ul>
-
-        <p style="color: black; margin-top: 5px;">
-            <b>Mechanical and Thermal Testing Equipment:</b>
-        </p>
-        <ul style="color: black; padding-left: 20px;">
+          </ul>
+        </div>
+        <div class="equip">
+          <h3>Mechanical &amp; thermal testing</h3>
+          <ul>
             <li>Uniaxial mechanical tester</li>
             <li>Cyclic mechanical tester</li>
             <li>Dynamic mechanical analyzer (DMA)</li>
             <li>Thermal chambers integrated with each system</li>
             <li>Load cell range: 0.1 mN to 30 kN</li>
-            <li>Temperature range: −200 °C to 400 °C</li>
-        </ul>
-
-        <p style="color: black; margin-top: 5px;">
-            These resources support multiscale experimental mechanics, thermal-mechanical research, and the development of next-generation manufacturing techniques.
-        </p>
+            <li>Temperature range: −200 °C to 400 °C</li>
+          </ul>
+        </div>
+      </div>
+      <p>These resources support multiscale experimental mechanics, thermal-mechanical research, and the development of next-generation manufacturing techniques.</p>
     </div>
 
-    <img src="static/img/lab/IDMlab.PNG" alt="Intelligent Design and Manufacturing Lab" class="responsive">
-
-</div>
-
-<div style="min-width: 500px; max-width: 1200px; margin:0 auto; text-align: justify;">
-
-    <div style="height: 30px">
-    </div>
-
-    <div style="padding: 30px; text-align: justify;">
-        <b style="font-size: 30px; color: black; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Additive Manufacturing Lab</b>
-        <p style="color: black; margin-top: 15px;">
-            The Department of Mechanical Engineering Additive Manufacturing (AM) Lab is located in <b>NC1809</b> and was newly renovated in 2025. This student-run facility supports the College of Engineering, Design, and Computing at CU Denver, providing hands-on experience in 3D printing and digital fabrication.
-        </p>
-        <p style="color: black; margin-top: 5px;">
-            The lab features a Print Farm with over <b>15 Prusa MK3</b> printers, along with <b>2 Prusa XL</b> and <b>5 Bambu A1</b> printers capable of multi-material printing. It also includes a metal extrusion printer and a kiln for sintering metal green parts, enabling advanced fabrication capabilities.
-        </p>
-        <p style="color: black; margin-top: 5px;">
-            The AM Lab processes student printing orders for a variety of mechanical engineering courses:
-        </p>
-        <ul style="color: black; margin-top: 5px; padding-left: 20px;">
+    <div class="facility">
+      <div class="facility-head">
+        <h2>Additive Manufacturing Lab</h2>
+        <p class="facility-meta">NC1809 · Renovated 2025</p>
+      </div>
+      <p class="facility-intro">The Department of Mechanical Engineering Additive Manufacturing (AM) Lab is a student-run facility that supports the College of Engineering, Design, and Computing at CU Denver, providing hands-on experience in 3D printing and digital fabrication.</p>
+      <figure class="facility-img"><img src="{{ '/assets/img/lab/am-lab.webp' | relative_url }}" alt="The Additive Manufacturing Lab print farm" loading="lazy"></figure>
+      <div class="stat-row">
+        <div class="stat"><span class="stat-num">15+</span><span class="stat-label">Prusa MK3</span></div>
+        <div class="stat"><span class="stat-num">2</span><span class="stat-label">Prusa XL</span></div>
+        <div class="stat"><span class="stat-num">5</span><span class="stat-label">Bambu A1</span></div>
+        <div class="stat"><span class="stat-num">1</span><span class="stat-label">Metal extrusion printer + sintering kiln</span></div>
+      </div>
+      <div class="equip-grid">
+        <div class="equip">
+          <h3>Course print orders</h3>
+          <ul>
             <li>MECH 1025 – CAD</li>
             <li>MECH 2024 – Materials Science</li>
             <li>MECH 3035 – Design of Mechanical Elements</li>
             <li>MECH 4035/4045 – Senior Design</li>
-        </ul>
-        <p style="color: black; margin-top: 5px;">
-            Trained undergraduate assistants manage the lab operations and help process print jobs. The lab also serves as a Maker Space for:
-        </p>
-        <ul style="color: black; margin-top: 5px; padding-left: 20px;">
-            <li>MECH 3045 – Fundamentals of Additive Manufacturing</li>
-        </ul>
-        <p style="color: black; margin-top: 5px;">
-            In this course, students learn to operate 3D printers independently to complete their hands-on projects. The lab also hosts undergraduate research in areas such as:
-        </p>
-        <ul style="color: black; margin-top: 5px; padding-left: 20px;">
+          </ul>
+        </div>
+        <div class="equip">
+          <h3>Maker space</h3>
+          <p>Serves MECH 3045 – Fundamentals of Additive Manufacturing, where students operate 3D printers independently to complete hands-on projects. Trained undergraduate assistants manage lab operations and process print jobs.</p>
+        </div>
+        <div class="equip">
+          <h3>Undergraduate research</h3>
+          <ul>
             <li>Multi-material printing</li>
             <li>FFF-based metal printing</li>
             <li>Advanced 3D printing technologies</li>
-        </ul>
+          </ul>
+        </div>
+      </div>
     </div>
-
-    <img src="static/img/lab/amlab.png" alt="Additive Manufacturing Lab" class="responsive">
-
-</div>
-
-<div style="height: 100px;"></div>
-<div w3-include-html="end.html"></div>
-<script>
-    includeHTML();
-</script>
-
-</body>
-</html>
+  </div>
+</section>

@@ -1,157 +1,17 @@
+---
+layout: null
+sitemap: false
+---
 <!DOCTYPE html>
 <html lang="en">
-<script>
-function includeHTML() {
-  var z, i, elmnt, file, xhttp;
-  /*loop through a collection of all HTML elements:*/
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    /*search for elements with a certain atrribute:*/
-    file = elmnt.getAttribute("w3-include-html");
-    if (file) {
-      /*make an HTTP request using the attribute value as the file name:*/
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-          /*remove the attribute, and call this function once more:*/
-          elmnt.removeAttribute("w3-include-html");
-          includeHTML();
-        }
-      }
-      xhttp.open("GET", file, true);
-      xhttp.send();
-      /*exit the function:*/
-      return;
-    }
-  }
-}
-</script>
-
-
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <style>
-.button {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 15px 25px;
-  text-align: center;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.button:hover {
-  background-color: green;
-}
-</style>
+  <meta charset="utf-8">
+  <title>Moved to Software</title>
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="{{ '/software.html' | absolute_url }}">
+  <meta http-equiv="refresh" content="0; url={{ '/software.html' | relative_url }}">
 </head>
 <body>
-
-
-
-<div style="background-image: url('static/img/index_start_cu.png'); background-repeat: no-repeat; background-size: cover; 
-    height: 700px; color: white;">
-    <div w3-include-html="head.html"></div>
-    <div style="height:100px"></div>
-    
-
-
-    <div style="float: right; background: rgba(0, 0, 0, .7); max-height: 200px; min-height: 100px; width: 50%;">
-        <div style="min-width: 500px; max-width: 1000px; margin:auto; opacity: 1;">
-            <div class="name-font">
-                <b>
-                    Design for a better world!
-                </b>
-                <p style="font-size: 40px;">
-                    
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-<script>
-  includeHTML();
-  </script>
-
-<div style="min-width: 500px; max-width: 1000px; margin:0 auto">
-    <br>
-    <h1>SimuLattice</h1>
-    <h2 style="font-size: 28px">A simulation software to support the design of lattice structures fabricated by Additive Manufacturing</h2>
-    <br />
-    <form action="static/simulattice.zip">
-        <button class="button">Download</button>
-    </form>
-</div>
-
-<div style="min-width: 500px; max-width: 1000px; margin:0 auto">
-    <br>
-    <img style="float: right" src="static/img/interface.png" width="650" height="520">
-    <p style="font-size: 24px">It has four models:</p>
-    <ul style="list-style-type:disc; font-size:18px">
-        <li>3D numerical homogenization model</li>
-        <li>Joint stiffening element model</li>
-        <li>Hybrid element model</li>
-        <li>As-built material property model</li>
-    </ul>
-    <br>
-
-    <p style="font-size: 24px">Introduction</p>
-
-    <p style="font-family: Arial ; font-size: 16px;">
-        The design of lattice structure can be divided into three design stages:<br>
-        <br>
-        1. Initial design stage<br>
-        2. Design optimization stage<br>
-        3. Design validation stage<br>
-        <br>
-    </p>
-    <p style="font-family: Arial ; font-size: 16px; text-align:justify; text-justify:inter-ideograph;">
-        The homogenization model can be used in the initial design stage to help designers to get the effective
-        mechanical property of any lattice topology. Designers don't need a solid mathematical background. The
-        effective property can by simply obtained by the homogenization code in SimuLattice.
-        <a href="http://materialstechnology.asmedigitalcollection.asme.org/article.aspx?articleid=2685642&resultClick=1">[Reference]</a><br>
-        <br>
-        The joint stiffening element model can be used in the
-        design optimization stage. It can consider the influence of the joint on the stiffness of the lattice structure.
-        Therefore, the result from the joint stiffening element model is more accurate.
-        <a href="https://www.sciencedirect.com/science/article/pii/S0020740318314954">[Reference]</a><br>
-        <br>
-        The hybrid element model can be used to simulate the solid-lattice hybrid structure. It uses the beam element to
-        model the lattice structure; it uses the tetrahedral element to model the solid part. The total computational cost
-        of the hybrid element model is much lower than the traditional model.
-        <a href="https://www.sciencedirect.com/science/article/pii/S2351978917302548">[Reference]</a><br>
-        <br>
-        The as-built material property model is to consider the manufacturing influence of AM on the mechanical property
-        of lattice structures. The material data is obtained experimentally. Interpolation functions are used to construct
-        the as-built material property model. Currently the material data stored in SimuLattice is for PLA fabricated by Ultimaker 3.
-        More materials will be added in the future.
-    </p>
-
-    <div style="height: 30px"></div>
-
-</div>
-
-<div style="min-width: 500px; max-width: 1500px; margin:0 auto; text-align: center">
-    <iframe width="800" height="450"
-            src="https://www.youtube.com/embed/bI7yyK2WCas"
-            frameborder="0" allowfullscreen>
-    </iframe>
-    <div style="height: 30px"></div>
-</div>
-
-
-
-
-
-<div w3-include-html="end.html"></div>
-<script>
-includeHTML();
-</script>
-
+  <p>This page has moved. <a href="{{ '/software.html' | relative_url }}">Go to Software</a>.</p>
 </body>
 </html>

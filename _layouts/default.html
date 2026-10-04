@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% if page.title %}{% assign full_title = page.title | append: " · " | append: site.title %}{% else %}{% assign full_title = site.title %}{% endif %}
+  {% assign desc = page.description | default: site.description %}
+  <title>{{ full_title }}</title>
+  <meta name="description" content="{{ desc | strip_html | escape }}">
+  <link rel="canonical" href="{{ page.url | replace: 'index.html', '' | absolute_url }}">
+  <meta property="og:title" content="{{ full_title }}">
+  <meta property="og:description" content="{{ desc | strip_html | escape }}">
+  <meta property="og:image" content="{{ '/assets/img/hero-campus.webp' | absolute_url }}">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#16181d">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2316181d'/><text x='32' y='42' font-family='Georgia,serif' font-size='28' font-weight='700' fill='%23CFB87C' text-anchor='middle'>IDM</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@600;700&display=swap">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  {% include header.html %}
+  <main id="main">
+    {% unless page.hero == false %}{% include page-hero.html %}{% endunless %}
+    {{ content }}
+  </main>
+  {% include footer.html %}
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('site-nav');
+      btn.addEventListener('click', function () {
+        var open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        nav.classList.toggle('is-open', !open);
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,228 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<script>
-    function includeHTML() {
-        var z, i, elmnt, file, xhttp;
-        /*loop through a collection of all HTML elements:*/
-        z = document.getElementsByTagName("*");
-        for (i = 0; i < z.length; i++) {
-            elmnt = z[i];
-            /*search for elements with a certain atrribute:*/
-            file = elmnt.getAttribute("w3-include-html");
-            if (file) {
-                /*make an HTTP request using the attribute value as the file name:*/
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                        if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-                        /*remove the attribute, and call this function once more:*/
-                        elmnt.removeAttribute("w3-include-html");
-                        includeHTML();
-                    }
-                }
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                /*exit the function:*/
-                return;
-            }
-        }
-    }
-</script>
-
-<head>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Sans">
-    <style>
-        body {
-            font-family: "Noto Sans";
-            font-size: 16px;
-        }
-    </style>
-    <title>Guoying Dong</title>
-</head>
-
-<body>
-<div style="background-image: url('static/img/index_start_cu.png'); background-repeat: no-repeat; background-size: cover; 
-    height: 700px; color: white;">
-    <div w3-include-html="head.html"></div>
-    <div style="height:100px"></div>
-    
-
-
-    <div style="float: right; background: rgba(0, 0, 0, .7); max-height: 200px; min-height: 100px; width: 50%;">
-        <div style="min-width: 500px; max-width: 1000px; margin:auto; opacity: 1;">
-            <div class="name-font">
-                <b>
-                    Design for a better world!
-                </b>
-                <p style="font-size: 40px;">
-                    
-                </p>
-            </div>
+---
+layout: default
+title: People
+eyebrow: People
+heading: The team
+lede: Graduate and undergraduate researchers in the IDM Lab.
+---
+<section class="section">
+  <div class="container">
+    {% for g in site.data.people %}
+    <h2 class="group-title">{{ g.group }}</h2>
+    <div class="people-grid{% if g.alumni %} is-alumni{% endif %}">
+      {% for m in g.members %}
+      <article class="person">
+        {% if m.photo %}
+        <img src="{{ '/assets/img/people/' | append: m.photo | relative_url }}" alt="Photo of {{ m.name }}" width="160" height="160" loading="lazy">
+        {% else %}
+        {% assign parts = m.name | split: " " %}
+        <div class="avatar" aria-hidden="true">{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}</div>
+        {% endif %}
+        <div class="person-body">
+          <h3>{{ m.name }}</h3>
+          <p class="person-research">{{ m.research }}</p>
+          {% if m.bio %}<p>{{ m.bio }}</p>{% endif %}
+          {% if m.linkedin %}<a class="text-link" href="{{ m.linkedin }}" target="_blank" rel="noopener">LinkedIn →</a>{% endif %}
         </div>
+      </article>
+      {% endfor %}
     </div>
-</div>
-<script>
-    includeHTML();
-</script>
-
-
-
-
-<div style="min-width: 500px; max-width: 1200px; margin:0 auto; text-align: justify;">
-    <div style="height: 30px">
-    </div>
-
-    <div style="text-align: center;"><h1 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 50px;">Ph.D. Students</h1></div>
-    <div style="padding-left: 30px;">
-        
-        <div class = "div-people", style="height: 300px; width: 1200 px; color: white;">
-
-            <div style = "float: left; height : 200px; width: 200px; background-image: url('static/img/people/halston.jpg'); background-repeat: no-repeat; background-size: cover;">
-            </div>
-        
-            <div style = "float: left; height : 300px; width: 900px; padding-left: 30px; text-align: justify;">
-                <b style="font-size: 30px; color: black; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Halston Sandford</b>
-                <p style="color: black; margin-top: 15px;">Research: Mechanics and deign of 3d printed continuous fiber reinforced polymers.</p>
-                <p style="color: black; margin-top: 15px;">Halston gratuated from Stanford University in 2022 with a Bachelor's degree. He joined the IDM lab in Jan. 2023. Currently, he is working on the process-property relationship in the 3D printing of composites. His research also includes digital twin development and sustainability of composite 3D printing.</p>
-            
-                <a style="font-size: 18px;" target="_blank" href="https://www.linkedin.com/in/halston-sandford-835338a9/">
-                    Linkedin
-                </a>
-            </div>
-        
-        </div>
-
-        <div class = "div-people", style="height: 300px; width: 1200 px; color: white;">
-
-            <div style = "float: left; height : 200px; width: 200px; background-image: url('static/img/people/yuanrui.jpg'); background-repeat: no-repeat; background-size: cover;">
-            </div>
-        
-            <div style = "float: left; height : 300px; width: 900px; padding-left: 30px; text-align: justify;">
-                <b style="font-size: 30px; color: black; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Yuanrui Wang</b>
-                <p style="color: black; margin-top: 15px;">Research: Advanced manufacturing of 3d printed composites.</p>
-                <p style="color: black; margin-top: 15px;">Yuanrui gratuated from CU Denver in 2023 with a Master's degree in EE. He joined the IDM lab in Aug. 2023. Currently, he is working on the advanced manufacturing of 3D printed composites.</p>
-            
-                <a style="font-size: 18px;" target="_blank" href="https://www.linkedin.com/in/yuanrui-wang-14ba66193/">
-                    Linkedin
-                </a>
-            </div>
-        
-        </div>
-
-
-    </div>
-
-    <div style="text-align: center;"><h1 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 50px;">Master Students</h1></div>
-    <div style="padding-left: 30px;">
-
-        <div class = "div-people", style="height: 300px; width: 1200 px; color: white;">
-
-            <div style = "float: left; height : 200px; width: 200px; background-image: url('static/img/people/ladpha.jpg'); background-repeat: no-repeat; background-size: cover;">
-            </div>
-        
-            <div style = "float: left; height : 300px; width: 900px; padding-left: 30px; text-align: justify;">
-                <b style="font-size: 30px; color: black; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Ladpha Teawdeswan</b>
-                <p style="color: black; margin-top: 15px;">Research: Design and simulation of multi-material lattice structures.</p>
-                <p style="color: black; margin-top: 15px;">Ladpha gratuated from CU Denver in 2023 with a Bachelor's degree in ME. She joined the IDM lab in May 2022 as an undergraduate research assistant. Currently, she is working on the design and simulation of multi-material lattice structures.</p>
-            
-                <a style="font-size: 18px;" target="_blank" href="https://www.linkedin.com/in/ladpha-teawdeswan-aa8209149/">
-                    Linkedin
-                </a>
-            </div>
-        
-        </div>
-
-        
-    </div>
-
-    <div>
-        <div style="text-align: center;"><h1 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 50px;">Undergraduate Students</h1></div>
-        <div style="padding-left: 30px;">
-
-            <div class = "div-people", style="height: 300px; width: 1200 px; color: white;">
-
-                <div style = "float: left; height : 200px; width: 200px; background-image: url('static/img/people/nik.png'); background-repeat: no-repeat; background-size: cover;">
-                </div>
-            
-                <div style = "float: left; height : 300px; width: 900px; padding-left: 30px; text-align: justify;">
-                    <b style="font-size: 30px; color: black; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Nikola Hilderbrand</b>
-                    <p style="color: black; margin-top: 15px;">Research: FDM printing of metal lattice structures.</p>
-                    <p style="color: black; margin-top: 15px;">Nikola is currently a senior student in the department of Mechanical Engineering. He joined the EUReCA as a research assistant in 2024 and also began working at the Additive Manufacturing lab in 2025. Now he works on EUReCA research of FDM modeling of metal-polymer lattice structures and refining post processing parameters.</p>
-                    <a style="font-size: 18px;" target="_blank" href="https://www.linkedin.com/in/nikola-hilderbrand-71a5171b7/">
-                        Linkedin
-                    </a>
-                </div>
-                
-
-                <div style = "float: left; height : 200px; width: 200px; background-image: url('static/img/people/idris.jpg'); background-repeat: no-repeat; background-size: cover;">
-                </div>
-            
-                <div style = "float: left; height : 300px; width: 900px; padding-left: 30px; text-align: justify;">
-                    <b style="font-size: 30px; color: black; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Idris Tinwala</b>
-                    <p style="color: black; margin-top: 15px;">Research: Design of voxel materials.</p>
-                    <p style="color: black; margin-top: 15px;">Idris is a highly motivated college student at CU Denver and pursuing his BS in Mechanical Engineering courses. He conducts research as a EURēCA! Undergraduate Research Assistant on voxel printed multi-material structures. He is passionate about robotics, 3D printing, programming, mechanical design, and deep learning.</p>
-                
-                    <a style="font-size: 18px;" target="_blank" href="https://www.linkedin.com/in/idris-tin/">
-                        Linkedin
-                    </a>
-
-                </div>
-                
-            
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <div>
-        <div style="text-align: center;"><h1 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 50px;">Alumni</h1></div>
-        <div style="padding-left: 30px;">
-
-            <div class = "div-people", style="height: 300px; width: 1200 px; color: white;">
-
-                <div style = "float: left; height : 200px; width: 200px; background-image: url('static/img/people/raphael.jpg'); background-repeat: no-repeat; background-size: cover;">
-                </div>
-            
-                <div style = "float: left; height : 300px; width: 900px; padding-left: 30px; text-align: justify;">
-                    <b style="font-size: 30px; color: black; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Raphael Provosty</b>
-                    <p style="color: black; margin-top: 15px;">Master's Degree in Mechanical Engineering</p>
-                    <p style="color: black; margin-top: 15px;">Graduated in May 2023</p>
-                
-                    <a style="font-size: 18px;" target="_blank" href="https://www.linkedin.com/in/raphael-provosty-8a8a51126/">
-                        Linkedin
-                    </a>
-                </div>
-
-                <div style = "float: left; height : 200px; width: 200px; background-image: url('static/img/people/brian_lim.PNG'); background-repeat: no-repeat; background-size: cover;">
-                </div>
-            
-                <div style = "float: left; height : 300px; width: 900px; padding-left: 30px; text-align: justify;">
-                    <b style="font-size: 30px; color: black; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Brian Lim</b>
-                    <p style="color: black; margin-top: 15px;">Bachelor's Degree in Mechanical Engineering, Outstanding Undergraduate Student Award</p>
-                    <p style="color: black; margin-top: 15px;">Graduated in May 2025</p>
-                    <a style="font-size: 18px;" target="_blank" href="https://www.linkedin.com/in/brian-lim-873b89338/">
-                        Linkedin
-                    </a>
-                </div>
-            
-            </div>
-
-            
-
-        </div>
-
-    </div>
-
-</div>
-
-<div style="height: 300px;"></div>
-<div w3-include-html="end.html"></div>
-<script>
-    includeHTML();
-</script>
-
-</body>
-</html>
+    {% endfor %}
+  </div>
+</section>

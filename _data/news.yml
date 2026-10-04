@@ -1,0 +1,23 @@
+# News items, newest first. Images go in assets/img/news/.
+
+- title: High School Interns
+  date: 2023 – Now
+  image: intern.webp
+  body:
+    - Students from DSST Montview High School completed a six-week internship at CU Denver. Dr. Dong taught them the fundamentals of additive manufacturing. They learned the implicit modeling software nTop and worked in the AM Lab to 3D print their designs.
+    - "Participants: Riya Mahesh, Juan Hinkson, Tiernan Pian, Kevin Rodriguez, Leonardo Orenday, Yafet Michael"
+    - "DSST Instructors: Ms. Jamie Villa and Ms. Lisa Atufunwa"
+
+- title: Additive Manufacturing Workshop
+  date: July 25, 2024
+  image: workshop.webp
+  body:
+    - "This Additive Manufacturing Workshop was held by the Dean of the College of Engineering, Design and Computing, Dr. Marty Dunn, and Assistant Professor in the Department of Mechanical Engineering, Dr. Guoying Dong, as part of the OEDIT-sponsored project: Auraria Campus Advanced Manufacturing Center of Excellence. More than 15 industry professionals participated in the training."
+    - "Presenters included Nicholas Jacobson, Kristin Wood, Richard Weir, Guoying Dong, Noah Mostow from Phase 3D, and Alex Janzen from Seurat Technologies."
+
+- title: Student Design Competition
+  date: May 2024
+  image: design-competition.webp
+  body:
+    - Students had a successful semester in MECH 3045 Additive Manufacturing at CU Denver. They were very excited about learning nTop design and metal 3D printing, and all the teams excelled in the Topology Optimization Competition. Students operated the mechanical tester in groups and tested their structures in person, with a live show of the experiment so everyone could follow along.
+    - Field-driven design, lattice structure, and FEA skills enable our students to design mechanical parts with excellent mechanical properties. They also loved the Metal Additive Manufacturing Workshop and got a chance to process metal 3D prints.

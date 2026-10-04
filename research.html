@@ -1,0 +1,23 @@
+---
+layout: default
+title: Research
+eyebrow: Research
+heading: What we work on
+lede: Our work spans new additive manufacturing processes, the mechanics and sustainability of printed composites, and intelligent design methods for architected materials.
+---
+<div class="container research-toc">
+  {% for r in site.data.research %}<a href="#{{ r.id }}">{{ r.title }}</a>{% endfor %}
+</div>
+{% for r in site.data.research %}
+<section class="section research-item{% cycle '', ' is-flipped' %}" id="{{ r.id }}">
+  <div class="container split">
+    <figure class="split-media">
+      <img src="{{ '/assets/img/research/' | append: r.image | relative_url }}" alt="{{ r.title }}" loading="lazy">
+    </figure>
+    <div class="split-body prose">
+      <h2>{{ r.title }}</h2>
+      {% for p in r.body %}<p>{{ p }}</p>{% endfor %}
+    </div>
+  </div>
+</section>
+{% endfor %}

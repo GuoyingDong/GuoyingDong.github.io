@@ -1,0 +1,25 @@
+{% assign a = site.author %}
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-block">
+      <p class="footer-title">Intelligent Design &amp; Manufacturing Lab</p>
+      <address>
+        {{ a.department }}<br>
+        {{ a.university }}<br>
+        {{ a.address }}
+      </address>
+    </div>
+    <div class="footer-block">
+      <p class="footer-title">Contact</p>
+      <p><a href="mailto:{{ a.email }}">{{ a.email }}</a><br>{{ a.phone }}<br>{{ a.office }}</p>
+    </div>
+    <div class="footer-block">
+      <p class="footer-title">Elsewhere</p>
+      <p class="footer-links">{% include profile-links.html %}</p>
+    </div>
+    <a class="footer-logo" href="https://www.ucdenver.edu/" target="_blank" rel="noopener">
+      <img src="{{ '/assets/img/cudenver.webp' | relative_url }}" alt="University of Colorado Denver" width="601" height="90" loading="lazy">
+    </a>
+  </div>
+  <div class="container footer-meta">© {{ site.time | date: '%Y' }} {{ a.name }}</div>
+</footer>

@@ -1,8 +1,11 @@
 # Site settings — edit these to update the header, footer and search previews.
 title: IDM Lab · Guoying Dong
 description: Intelligent Design & Manufacturing (IDM) Lab at the University of Colorado Denver, led by Dr. Guoying Dong. Research in additive manufacturing, continuous-fiber composites, lattice structures and AI-driven design.
-url: https://guoyingdong.github.io
+url: https://guoyingdong.com
 baseurl: ""
+
+# Cloudflare Web Analytics token (Cloudflare → Analytics & Logs → Web Analytics). Loads only in production builds.
+cloudflare_analytics_token: "09ac5e6b61f949ee998675c316bd8009"
 
 author:
   name: Guoying Dong
